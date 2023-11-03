@@ -1,0 +1,111 @@
+
+*{
+   font-family: "poppins",sans-serif;
+    
+}
+.navbar{
+    font-weight: 600;
+    text-shadow: 50%;
+}
+.container-fluid a:hover{
+    color: grey;
+}
+
+.navbar-nav{
+    padding-right: 15%;
+}
+.nav-item a{
+    border:0;
+    color: white;
+}
+#contactusbtn{
+    margin-right: 10%;
+}
+
+
+.nav-item{
+    padding-right: 20%;
+    
+    
+}
+.carousel-item img{
+    height: 737px;
+    opacity: .6;
+}
+
+
+.carousel{
+    background: rgb(5, 45, 69);
+}
+.carousel-caption h1 {
+    position: absolute;
+    right: 15%;
+    bottom: 350%; 
+    left: 10%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 600;
+    text-shadow: 90%;
+}
+@media (min-width:768px){
+    .carousel-caption h1{font-size: 5em;}
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  
+  background-image: grey;
+}
+.collection-heading:hover{
+  color:rgb(233, 190, 22);
+  
+}
+.collection{
+    background:linear-gradient(rgb(162, 162, 162),rgb(7, 35, 54),rgb(162, 162, 162))
+}
+.card-img-top {
+    width: 100%;
+    height: 55%;
+}
+.col-12 h3:hover{
+    color:rgb(233, 190, 22);
+}
+.wrapper{
+   padding-top:0%;
+   color: rgb(240, 176, 48);
+   
+   
+   
+}
+.wrapper h3{
+    font-weight: 300;
+    text-shadow:2% #1d1c1c;
+    backdrop-filter: blur(10px);
+    
+    
+}
+.row.text-start{
+    background: linear-gradient(rgb(162, 162, 162),rgb(7, 35, 54));
+}
+.col-12 img{
+    position: relative;
+    width: 100%;
+    margin: 2%;
+    margin-left: 1%;
+    border:5px;
+    border-color: black;
+    border-radius: 5%;
+    
+
+}
+
+
