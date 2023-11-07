@@ -1,0 +1,149 @@
+.header{
+    background: #3b5998;
+    width:100%;
+    height:85px;
+
+}
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.logotext{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: helvetica Neue,helvetica,Arial, Helvetica, sans-serif;
+    margin-left: 100px;
+    margin-top: 50px;
+
+}
+.logo{
+    padding-top: 20px;
+    width:50%;
+    float:left;
+}
+.login{
+    width:50%;
+    padding-top:12px;
+    float:left;
+}
+.logintext{
+    color: white;
+    font-size: 11px;
+}
+.forgottentext{
+    font-size: 12px;
+    color: rgb(152, 152, 244);
+    text-decoration: none;
+}
+.login-controls{
+    margin-left: 115px;
+
+}
+.submitbutton{
+    background-color: #4267b2;
+    color: white;
+    height:20px;
+    cursor:pointer;
+
+}
+.submitbutton:hover{
+    background:rgb(235, 112, 112);
+}
+.leftsection{
+    width:50%;
+    float:left;
+    padding-left: 134px;
+    padding-top: 52px;
+
+}
+.rightsection{
+    width:39%;
+    float:left;
+
+}
+.mainbody{
+    background: linear-gradient(white,#D3D8E8);
+    width:100%;
+    height:500px;
+}
+.para{
+    color: #293e86;
+    font-weight: bold;
+    font-size: 18px;
+}
+.firstname{
+    height:24px;
+    width:200px;
+    border-radius: 5px;
+    font-size: 15px;
+    border-color: white;
+    
+
+}
+.secondname{
+    height:24px;
+    width:200px;
+    border-radius: 5px;
+    font-size: 15px;
+    border-color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+
+
+}
+.emailmobilebox{
+    height:24px;
+    width:200px;
+    border-radius: 5px;
+    font-size: 15px;
+    border-color: white;
+    margin-top: 20px;
+    
+
+}
+.password{
+    height:24px;
+    width:200px;
+    border-radius: 5px;
+    font-size: 15px;
+    border-color: white;
+    margin-top: 20px;
+    margin-left:20px;
+}
+
+.month{
+    margin-left:10px ;
+}
+.year{
+    margin-left: 10px;
+}
+.dob{
+    font-size:small;
+    font-weight: bold;
+    color: #293e86;
+}
+.female{
+    margin-left: 50px;
+    color: #293e86;
+}
+.male{
+    color: #293e86;
+}
+.radio2{
+    margin-left: 80px;
+}
+.submitbtn{
+    
+    background-color: rgb(85, 125, 24);
+    color: white;
+}
+.submitbtn:hover{
+    background-color: darkkhaki;
+}
+#fbimg{
+    width:400px;
+    height:300px;
+}

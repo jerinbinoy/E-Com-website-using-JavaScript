@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #email{
+        margin-left: 500px;
+        margin-top: 200px;
+        border-radius: 5px;
+        background-color: aquamarine;
+        width:200px;
+        height:40px;
+        
+
+      }
+      .button{
+
+        background-color: blueviolet;
+        border-radius: 5px;
+        width:100px;
+        height:40px;
+        margin-bottom: 2px;
+        margin-left: 20px;
+
+
+      }
+      #message{
+        margin-left: 510px;
+
+      }
+      #password{
+        margin-left: 20px;
+        margin-top: 200px;
+        border-radius: 5px;
+        background-color: aquamarine;
+        width:200px;
+        height:40px;
+
+      }
+    </style>
+</head>
+<body>
+  <input  id="email" type="email" placeholder="Email">
+  <input id="password" type="text" placeholder="Password">
+  <button class="button" onclick="display()" >Request permission</button><br>
+  <h3 id="message" ></h3>
+    
+    <script>
+      
+      function display(){
+         var userdata={email:"jerinbinoy22@gmail.com",
+                        password:"jerinmerin2215",
+                      email:"merinbinoy2000@gmail.com",password:"hellomerin123"}
+                        
+
+        var email=document.getElementById("email").value
+        var password=document.getElementById("password").value
+
+        if(email==userdata.email){
+         if(password==userdata.password){
+          alert("Permission Granted!!!")
+          }
+          
+        }else{
+          alert("User not matching!")
+        }
+
+
+        
+      }
+    </script>
+</body>
+</html>

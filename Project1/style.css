@@ -6,9 +6,10 @@
 .navbar{
     font-weight: 600;
     text-shadow: 50%;
+    transition: 2s;
 }
 .container-fluid a:hover{
-    color: grey;
+    color: black;
 }
 
 .navbar-nav{
@@ -63,14 +64,18 @@
   background-size: 100%, 100%;
   border-radius: 50%;
   
-  background-image: grey;
+  
 }
+
 .collection-heading:hover{
   color:rgb(233, 190, 22);
   
 }
 .collection{
-    background:linear-gradient(rgb(162, 162, 162),rgb(7, 35, 54),rgb(162, 162, 162))
+    background:linear-gradient(rgb(179, 178, 178),rgb(77, 77, 77));
+}
+.card.shadow-lg:hover{
+    opacity: .9;
 }
 .card-img-top {
     width: 100%;
@@ -81,7 +86,7 @@
 }
 .wrapper{
    padding-top:0%;
-   color: rgb(240, 176, 48);
+   color: rgb(248, 247, 247)
    
    
    
@@ -93,6 +98,7 @@
     
     
 }
+
 .row.text-start{
     background: linear-gradient(rgb(162, 162, 162),rgb(7, 35, 54));
 }
@@ -104,8 +110,48 @@
     border:5px;
     border-color: black;
     border-radius: 5%;
+    opacity: .7;
+    transition: 1s;
     
 
 }
-
-
+.col-12 img:hover{
+    opacity: .4;
+}
+.card-img-top{
+    height:100%;
+}
+.p-5 {
+    padding: 0rem!important;
+}
+.form-control.mb-4.w-75{
+    margin-left: 13%;
+}
+.form-group textarea{
+    margin-left: 13%;
+}
+.col-6.p-3 form{
+    height:100%;
+}
+.bx {
+    font-size: 190%;
+}
+.col-12.text-center.text-white a{
+    text-decoration: none;
+    color: white;
+}
+.col-12.text-center.text-white a:hover{
+    color:rgb(240, 176, 48);
+}
+.m-3 {
+    margin: 0rem!important;
+}
+.font-weight-bold a:hover{
+    color: rgb(233, 190, 22);
+}
+.contact-section{
+    background-color: rgb(89, 89, 89);
+}
+.col-12.col-sm-6.pt-3 form{
+    width:80%;
+}

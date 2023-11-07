@@ -1,0 +1,23 @@
+#profileimg{
+    border-radius:10px ;
+    transition: 2s ease;
+    border:2px;
+    border-color: rgb(2, 30, 20);
+     
+}
+#profileimg:hover{
+    border-radius: 50%;
+    border:2px;
+    border-color: rgb(2, 30, 20);   
+}
+.header{
+    background-color: rgb(2, 32, 59);
+    display: block;
+
+}
+#home.hover{
+    color: rgb(0, 191, 255);
+}
+body{
+    background-color: rgb(2, 32, 59);
+}
