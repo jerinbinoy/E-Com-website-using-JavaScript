@@ -69,18 +69,15 @@ function  addToCartJs(){
              emptycart.style.display = 'none';
 
               if (emptycart.style.display === 'none'){
-                document.getElementById('product-description').innerHTML = `
-                  <div class="productdetails col-12  mt-5  rounded-3 border  border-2 p-3 mb-4 shadow" id="productdetails">
-                    <h3 class="text-center ">Product Details</h3>
+
+                document.getElementById('product-description').innerHTML += `
+                        
+                            <div class="productdetails col-12  mt-5  rounded-3 border  border-2 p-3 mb-4 shadow" id="productdetails">
+                            <h3 class="text-center ">Product Details</h3>
+                            <div id="productlist">
 
 
-                    </div>`
-              }
-              
-                document.getElementById('productdetails').innerHTML +=
-                
-
-                          `<div class="d-flex productdescription border rounded p-3 col-12" >
+                            <div class="d-flex productdescription border rounded p-3 col-12" >
                             <div class="col-6">
                               <img src="${allProducts[j].img}" alt="" class="img-fluid rounded-3 shadow ">
                             </div>
@@ -91,10 +88,14 @@ function  addToCartJs(){
                               <h6>Quantity:  <select><option>${occurance(cartlive,cartlive[i].pid)}</option></select></h6><br><br>
                               <button class="btn btn-danger" onclick="removeproduct('${allProducts[j].pid}')">Remove Product</button>
                             </div>
-                          </div>`
-
-
-                        
+                            </div>
+        
+                            </div>
+        
+                            </div>`
+                            
+              }
+                    
                 document.getElementById('grandtotal').innerHTML =
                         `<div class="finalamount border border-2 rounded-3 mt-5 ms-2 p-3 mb-4 shadow">
                         <h3 class="text-center">Grand Total</h3>
@@ -106,6 +107,7 @@ function  addToCartJs(){
                         <a href="" class="btn btn-warning ">Place Order</a>
                         </div>`
                          ;
+              
             }
             
           }
@@ -129,7 +131,7 @@ function removeproduct(pid) {
           }
         }
         
-        document.getElementById('cart-btn').innerHTML = 0 ;
+        document.getElementById('cart-btn').innerHTML = cartlive.length ;
         localStorage.removeItem('cartquantity') ;
 }           
    
