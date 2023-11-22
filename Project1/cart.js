@@ -121,8 +121,10 @@ function removeproduct(pid) {
         
         for (i = 0; i < cartlive.length ; i++){
           if (pid === cartlive[i].pid){
-            cartlive.splice(i);
+           cartlive.splice(i,1);
             localStorage.setItem('cartlive',JSON.stringify(cartlive));
+            document.getElementById('product-description').innerHTML = '';
+            document.getElementById('grandtotal').innerHTML = '';
             addToCartJs();
 
             if (cartlive.length === 0){
