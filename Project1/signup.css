@@ -1,0 +1,27 @@
+body{
+    font-family: "poppins";
+    font-weight: 300;
+    height: max-content;
+    background-color: rgb(56, 66, 75);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: rgb(236, 162, 162);
+}
+.container{
+    margin-top: 1%;
+    width: 40%;
+    height:70%;
+    border-radius:2%;
+    
+}
+.form-control{
+    width: 70%;
+    margin-left: 15%;
+}
+.heading{
+    margin-top: 2%;
+    
+}
+h1{
+    font-weight: 700;
+}

@@ -19,15 +19,14 @@
     border:0;
     color: white;
 }
-#contactusbtn{
+#loginbtn{
     margin-right: 10%;
 }
-
-
 .nav-item{
     padding-right: 20%;
-    
-    
+}
+#contactusbtn{
+    padding-right: 0%;
 }
 .carousel-item img{
     height: 737px;
@@ -73,6 +72,9 @@
 }
 .collection{
     background:linear-gradient(rgb(179, 178, 178),rgb(77, 77, 77));
+}
+.card{
+    color: white;
 }
 .card.shadow-lg:hover{
     opacity: .9;

@@ -1,0 +1,26 @@
+body{
+    font-family: "poppins";
+    font-weight: 300;
+    height: max-content;
+    background-image:url("Firefly\ footwear\ shop\ in\ colourful\ background\ cover\ photo\ 62804.jpg");
+    color: white;
+}
+.container{
+    margin-top: 3%;
+    width: 40%;
+    height:70%;
+    border-radius:2%;
+    
+}
+.form-control{
+    width: 70%;
+    margin-left: 15%;
+}
+.heading{
+    margin-top: 4%;
+    
+}
+h1{
+    font-weight: 700;
+}
+

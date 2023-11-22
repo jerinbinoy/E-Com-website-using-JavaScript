@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="collection.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark " id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand  me-0 " href="index.html/#home">
+                <img src="mj-removebg-preview.png" alt="" width="30" height="32" class="d-inline-block align-text-top pt-0 ">
+                MJ Footwears
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+              <li class="nav-item ">
+                <a href="./index.html" class="btn btn-outline-warning" type="button" id="homebtn">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.html/#collection-section" class="btn btn-outline-warning" type="button" id="collectionbtn" >Collection</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html/#contactsection" class="btn btn-outline-warning" type="button" id="contactusbtn">Contact Us</a>
+              </li>
+              
+            </ul>
+            <a href="./login.html" class="btn btn-outline-warning" role="button" id="loginbtn">Login</a>
+            
+            <a type="button" class="btn btn-warning bx bx-cart-alt position-relative me-5 text-decoration-none cartbtn" href="./cart.html">
+            
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-btn">
+                0
+                
+              </span>
+            </a>
+            
+            
+          </div>
+        </div>
+      </nav>
+
+    <div class="items">
+      <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-items">
+          <a class="nav-link active" aria-current="page" href="#tab1" data-bs-toggle="tab">Trending</a>
+        </li>
+        <li class="nav-items">
+          <a class="nav-link" href="#tab2" data-bs-toggle="tab">Mens</a>
+        </li>
+        <li class="nav-items">
+          <a class="nav-link" href="#tab3" data-bs-toggle="tab">Ladies</a>
+        </li>
+        <li class="nav-items">
+          <a class="nav-link " href="#tab4" data-bs-toggle="tab">Children</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab1">
+        <div class="container-fluid ">
+        <div class="row m-3 d-flex justify-content-center">
+          <h3 class="text-center">Trending Now</h3>
+
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/products/GC-4005_GC-4005_NAVY-D.GRY_2_b36f3a60-8c5e-45ef-bc9e-7b7224813e14.jpg?v=1698477616&width=900" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">GC-4005 Navy Men's Clogs</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart('lksdkjfiq6478')">Add to cart</button>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/products/CAMPCLINT_WHITE-L.GRY.jpg?v=1697518921&width=720" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CAMP CLINT White Men's Sneakers</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart(`ytoluhggg7637d7f`)">Add to cart</button>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/products/GC-1025-BLUE_1_7b83e470-7fbc-4b0b-9820-bb7b250cb2d3.jpg?v=1670325781&width=900" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Blue Men's Flip Flops</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart(`ytollkh9284i`)">Add to cart</button>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/products/SL-433_SL-433_F.GRN-BLK_1.jpg?v=1670325397&width=720" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Green Men's Sliders</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart(`Green Men's Sliders`)">Add to cart</button>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/files/CITY-RIDE_5G-627_M.GRY-LMN.jpg?v=1690478383&width=900" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CITY-RIDE Grey Men's Sneakers</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart(`CITY-RIDE Grey Men's Sneakers`)">Add to cart</button>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/products/RAISE_22L-129_L.PRPL-WHT_a0f662db-024e-4898-b1c7-726d8b2fa761.jpg?v=1670325431&width=900" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">RAISE Purple Women Running Shoes</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart(`RAISE Purple Women Running Shoes`)">Add to cart</button>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/products/GC-4005_GC-4005_OFFWHT-L.GEY_2_455c018e-0108-49aa-b775-576783fa025a.jpg?v=1698477606&width=900" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">GC-4005 Off white Men's Clogs</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart(`GC-4005 Off white Men's Clogs`)">Add to cart</button>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p- shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/products/CAMPIAN_22K-109_RED-BLU_2.jpg?v=1670325809&width=720" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CAMP IAN Red Kids Running Shoes</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart(`CAMP IAN Red Kids Running Shoes`)">Add to cart</button>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/products/camp-shimmer-pink-ylw.jpg?v=1670325440&width=900" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CAMP SHIMMER Pink Women Shoes</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart(`CAMP SHIMMER Pink Women Shoes`)">Add to cart</button>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="https://www.campusshoes.com/cdn/shop/products/GC-4001_NAVY_1080x1440_f3d70479-3885-476d-be2d-1898917e7bd2.jpg?v=1683146597&width=720" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">GC-4001 Navy Men's Clogs</h5>
+            <button class="btn btn-warning add-to-cart-btn" onclick="addToCart(`GC-4001 Navy Men's Clogs`)">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+        
+
+      
+     
+
+      
+       
+      <div class="tab-pane" id="tab2">
+        <div class="container-fluid ">
+        <div class="row m-3 d-flex justify-content-center">
+          <h3 class="text-center">Mens Collection</h3>
+
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+          <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <a href="#" class="btn btn-warning">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+
+
+
+        <div class="tab-pane " id="tab3">
+          <div class="container-fluid ">
+          <div class="row m-3 d-flex justify-content-center">
+            <h3 class="text-center">Ladies Collection</h3>
+  
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2  m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+
+
+
+
+        <div class="tab-pane " id="tab4">
+          <div class="container-fluid ">
+          <div class="row m-3 d-flex justify-content-center">
+            <h3 class="text-center">Children's Collection</h3>
+  
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+          <div class="card col-12 col-sm-6 col-md-3 col-lg-2 m-2 text-center p-0 shadow">
+            <img src="mjfootwears.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn btn-warning">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+  </div>
+     
+
+
+
+    
+    <script src="collection.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
