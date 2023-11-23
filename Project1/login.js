@@ -41,7 +41,7 @@ function addUser(){
                 
                 users.push(user);
                 localStorage.setItem('user',JSON.stringify(users)) ;
-
+                
                 document.getElementById('password-reenter').style.borderColor = '' ;
                 document.getElementById('password-reenter').style.backgroundColor = '' ;
                 document.querySelector('.re-password-js').value = repassword ;

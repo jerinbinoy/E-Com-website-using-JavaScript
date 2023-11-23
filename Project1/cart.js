@@ -34,9 +34,15 @@
                     {pid:'oiweoruhqb278435',
                     img:'https://www.campusshoes.com/cdn/shop/products/camp-shimmer-pink-ylw.jpg?v=1670325440&width=900',
                     name:"CAMP SHIMMER Pink Women Shoes",
-                    price:'Rs.1299'}
+                    price:'Rs.1299'},
+                    {pid:'0938ryghiuhusdgf',
+                    img:'https://www.campusshoes.com/cdn/shop/products/GC-4001_NAVY_1080x1440_f3d70479-3885-476d-be2d-1898917e7bd2.jpg?v=1683146597&width=720',
+                     name:`GC-4001 Navy Men's Clogs`,
+                    price:'Rs.899'}
                 
                                     ];
+                                    
+let cartamnttotal = [];                                   
 
 window.onload = function cartQuantity(){
    
@@ -57,10 +63,12 @@ function  addToCartJs(){
     let cartlive = JSON.parse(localStorage.getItem('cartlive'));
     console.log(cartlive);
     
-
+    
+     
     for ( let i = 0; i < cartlive.length; i++){
-        for ( let j = 0 ; j < allProducts.length ; j++ ){
-          console.log(cartlive[i].pid);
+        
+          for ( let j = 0 ; j < allProducts.length ; j++ ){
+            console.log(cartlive[i].pid);
           
 
            if (cartlive[i].pid === allProducts[j].pid){
@@ -95,25 +103,39 @@ function  addToCartJs(){
                             </div>`
                             
               }
-                    
-                document.getElementById('grandtotal').innerHTML =
+                   let amount = allProducts[j].price.match(/(\d+)/);
+                   let amntafterdis = (amount[0] - discount(allProducts[j].price)).toFixed(2);
+                   let finalamount = amntafterdis*occurance(cartlive,cartlive[i].pid);
+                   
+                document.getElementById('grandtotal').innerHTML +=
                         `<div class="finalamount border border-2 rounded-3 mt-5 ms-2 p-3 mb-4 shadow">
-                        <h3 class="text-center">Grand Total</h3>
-                        <p>Maximum Retail Price :                                    ${allProducts[j].price}.00</p>
-                        <p>Discount :                                                10%</p>
-                        <p>Tax Amount :                                              ${allProducts[j].price}</p>
-                        <p>Amount :                                                  Rs.851.12</p>
-                        <h6>Total :                                                  Rs.1079.00</h6>
-                        <a href="" class="btn btn-warning ">Place Order</a>
+                        <h3 class="text-center">Product Total</h3>
+                        <p>Maximum Retail Price :                                   ${allProducts[j].price}.00</p>
+                        <p>Discount(10%) :                                          Rs.${discount(allProducts[j].price)}     </p>
+                        <p>Tax Amount(12%) :                                        Rs.${tax(allProducts[j].price)}      </p>
+                        <p>Amount :                                                  Rs.${amntafterdis}</p>
+                        <p>Quantity : ${occurance(cartlive,cartlive[i].pid)} </p>
+                        <hr>
+                        <h6 style="color:darkred;font-weight:600;" class="text-end">Total :     Rs.${finalamount.toFixed(2)}</h6>
+                        <a href="" class="btn btn-warning text-end">Place Order</a>
                         </div>`
                          ;
+                         
               
+              carttotal(finalamount,cartlive);
+              
+              
+
             }
             
           }
+        
+        
         };
 
     };
+
+    
     
 function removeproduct(pid) {
 
@@ -135,6 +157,7 @@ function removeproduct(pid) {
         
         document.getElementById('cart-btn').innerHTML = cartlive.length ;
         localStorage.removeItem('cartquantity') ;
+        
 }           
    
 
@@ -145,6 +168,40 @@ function occurance(cartlive,pid){
       return count;
 }
           
-       
 
+function discount(mrp){
+  let MRP = mrp.match(/(\d+)/);
+  
+  let discount = ((MRP[0]/100)*10).toFixed(2) ;
+  return discount ;
+  
+
+}
+
+function tax(mrp){
+          let MRP = mrp.match(/(\d+)/);
+
+          let tax = ((MRP[0]/100)*12).toFixed(2) ;
+          return tax;
+}
+ 
+
+
+function carttotal(finalamount,cartlive){
+        if (cartlive.length === 0){
+          document.getElementById('carttotal').innerHTML = ``;
+        }
+        var finalamount1 = finalamount.toFixed(2);
+        
+        cartamnttotal.push(finalamount1);
+        localStorage.setItem('cartamnttotal',JSON.stringify(cartamnttotal));
+        
+        let carttotalamount = JSON.parse(localStorage.getItem('cartamnttotal'));
+        
+        let sum = 0;
+        carttotalamount.forEach((item)=>(sum += Number(item)));
+        
+        document.getElementById('carttotal').innerHTML = `<h5 class="bg-secondary text-white p-2">Your cart total is <span style="color:yellow;">Rs.${sum.toFixed(2)}</span><button class="btn btn-outline-warning float-end">Buy Together</button></h5>`;
+
+}
        
