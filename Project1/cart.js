@@ -61,17 +61,18 @@ addToCartJs();
 
 function  addToCartJs(){
     let cartlive = JSON.parse(localStorage.getItem('cartlive'));
-    console.log(cartlive);
+    let pids = cartlive.map(function(item){return item['pid']});
+    let filteredcartlive = pids.filter((pid,index) =>pids.indexOf(pid) === index );
     
     
      
-    for ( let i = 0; i < cartlive.length; i++){
+    for ( let i = 0; i < filteredcartlive.length; i++){
         
           for ( let j = 0 ; j < allProducts.length ; j++ ){
-            console.log(cartlive[i].pid);
+            console.log(filteredcartlive[i]);
           
 
-           if (cartlive[i].pid === allProducts[j].pid){
+           if (filteredcartlive[i] === allProducts[j].pid){
 
              let emptycart = document.getElementById('emptycart');
              emptycart.style.display = 'none';
