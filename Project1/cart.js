@@ -42,7 +42,8 @@
                 
                                     ];
                                     
-let cartamnttotal = [];                                   
+let cartamnttotal = [];
+                                   
 
 window.onload = function cartQuantity(){
    
@@ -94,7 +95,7 @@ function  addToCartJs(){
                               <h4>${allProducts[j].name}</h4>
                               <p>It is a most selling shoes from a renowned brand. </p>
                               <h5>${allProducts[j].price}</h5><br>
-                              <h6>Quantity:  <select><option>${occurance(cartlive,cartlive[i].pid)}</option></select></h6><br><br>
+                              <h6>Quantity:  <select><option>${occurance(cartlive,filteredcartlive[i])}</option></select></h6><br><br>
                               <button class="btn btn-danger" onclick="removeproduct('${allProducts[j].pid}')">Remove Product</button>
                             </div>
                             </div>
@@ -115,7 +116,7 @@ function  addToCartJs(){
                         <p>Discount(10%) :                                          Rs.${discount(allProducts[j].price)}     </p>
                         <p>Tax Amount(12%) :                                        Rs.${tax(allProducts[j].price)}      </p>
                         <p>Amount :                                                  Rs.${amntafterdis}</p>
-                        <p>Quantity : ${occurance(cartlive,cartlive[i].pid)} </p>
+                        <p>Quantity : ${occurance(cartlive,filteredcartlive[i])} </p>
                         <hr>
                         <h6 style="color:darkred;font-weight:600;" class="text-end">Total :     Rs.${finalamount.toFixed(2)}</h6>
                         <a href="" class="btn btn-warning text-end">Place Order</a>
@@ -144,7 +145,9 @@ function removeproduct(pid) {
         
         for (i = 0; i < cartlive.length ; i++){
           if (pid === cartlive[i].pid){
-           cartlive.splice(i);
+            let occured = occurance(cartlive,pid);
+           cartlive.splice(i,occured);
+
             localStorage.setItem('cartlive',JSON.stringify(cartlive));
             document.getElementById('product-description').innerHTML = '';
             document.getElementById('grandtotal').innerHTML = '';
