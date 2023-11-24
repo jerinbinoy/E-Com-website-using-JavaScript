@@ -42,7 +42,8 @@
                 
                                     ];
                                     
-let cartamnttotal = [];
+
+let cartamnttotal = [] ;
                                    
 
 window.onload = function cartQuantity(){
@@ -68,7 +69,9 @@ function  addToCartJs(){
     
      
     for ( let i = 0; i < filteredcartlive.length; i++){
-        
+
+      
+
           for ( let j = 0 ; j < allProducts.length ; j++ ){
             console.log(filteredcartlive[i]);
           
@@ -105,9 +108,10 @@ function  addToCartJs(){
                             </div>`
                             
               }
-                   let amount = allProducts[j].price.match(/(\d+)/);
-                   let amntafterdis = (amount[0] - discount(allProducts[j].price)).toFixed(2);
-                   let finalamount = amntafterdis*occurance(cartlive,cartlive[i].pid);
+                   
+              let amount = allProducts[j].price.match(/(\d+)/);
+              let amntafterdis = (amount[0] - discount(allProducts[j].price)).toFixed(2); 
+              let finalamount = amntafterdis*occurance(cartlive,filteredcartlive[i]);   
                    
                 document.getElementById('grandtotal').innerHTML +=
                         `<div class="finalamount border border-2 rounded-3 mt-5 ms-2 p-3 mb-4 shadow">
@@ -124,15 +128,15 @@ function  addToCartJs(){
                          ;
                          
               
-              carttotal(finalamount,cartlive);
               
               
+             carttotal(finalamount,cartlive);
 
             }
             
           }
         
-        
+          
         };
 
     };
@@ -142,6 +146,8 @@ function  addToCartJs(){
 function removeproduct(pid) {
 
         let cartlive = JSON.parse(localStorage.getItem('cartlive'));
+        cartamnttotal = [] ;
+        
         
         for (i = 0; i < cartlive.length ; i++){
           if (pid === cartlive[i].pid){
@@ -149,18 +155,22 @@ function removeproduct(pid) {
            cartlive.splice(i,occured);
 
             localStorage.setItem('cartlive',JSON.stringify(cartlive));
+            
             document.getElementById('product-description').innerHTML = '';
             document.getElementById('grandtotal').innerHTML = '';
+            
             addToCartJs();
 
             if (cartlive.length === 0){
-              document.getElementById('product-description').innerHTML = `<h4 class="text-center m-3 ms-1 border col-12 p-4 rounded-3">Your cart is empty</h4>`;
+              document.getElementById('emptycart').style.display = 'block';
+              document.getElementById('carttotal').innerHTML = ``;
             }
           }
         }
         
         document.getElementById('cart-btn').innerHTML = cartlive.length ;
         localStorage.removeItem('cartquantity') ;
+        
         
 }           
    
@@ -198,13 +208,11 @@ function carttotal(finalamount,cartlive){
         var finalamount1 = finalamount.toFixed(2);
         
         cartamnttotal.push(finalamount1);
-        localStorage.setItem('cartamnttotal',JSON.stringify(cartamnttotal));
         
-        let carttotalamount = JSON.parse(localStorage.getItem('cartamnttotal'));
+        console.log(cartamnttotal);
         
         let sum = 0;
-        carttotalamount.forEach((item)=>(sum += Number(item)));
-        
+        cartamnttotal.forEach((item)=>(sum += Number(item)));
         document.getElementById('carttotal').innerHTML = `<h5 class="bg-secondary text-white p-2">Your cart total is <span style="color:yellow;">Rs.${sum.toFixed(2)}</span><button class="btn btn-outline-warning float-end">Buy Together</button></h5>`;
 
 }
