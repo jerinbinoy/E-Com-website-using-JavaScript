@@ -81,16 +81,20 @@ function  addToCartJs(){
              let emptycart = document.getElementById('emptycart');
              emptycart.style.display = 'none';
 
+              let amount = allProducts[j].price.match(/(\d+)/);
+              let amntafterdis = (amount[0] - discount(allProducts[j].price)).toFixed(2); 
+              let finalamount = amntafterdis*occurance(cartlive,filteredcartlive[i]);
+
               if (emptycart.style.display === 'none'){
 
                 document.getElementById('product-description').innerHTML += `
                         
-                            <div class="productdetails col-12  mt-5  rounded-3 border  border-2 p-3 mb-4 shadow" id="productdetails">
+                            <div class="productdetails col-12  mt-5  rounded-3 border  border-2 p-3 mb-4 shadow " id="productdetails">
                             <h3 class="text-center ">Product Details</h3>
-                            <div id="productlist">
+                            <div id="productlist" class="d-flex">
 
 
-                            <div class="d-flex productdescription border rounded p-3 col-12" >
+                            <div class="d-flex productdescription border rounded p-3 col-6" id="product">
                             <div class="col-6">
                               <img src="${allProducts[j].img}" alt="" class="img-fluid rounded-3 shadow ">
                             </div>
@@ -102,33 +106,25 @@ function  addToCartJs(){
                               <button class="btn btn-danger" onclick="removeproduct('${allProducts[j].pid}')">Remove Product</button>
                             </div>
                             </div>
+
+
+                            <div class="finalamount border col-6 rounded-3  ms-2 p-3 ">
+                                <h3 class="text-center">Product Total</h3>
+                                <p>Maximum Retail Price :                             <span class="float-end"> ${allProducts[j].price}.00</span></p>
+                                <p>Discount(10%) :                                    <span class="float-end">Rs.${discount(allProducts[j].price)}  </span>   </p>
+                                <p>Tax Amount(12%) :                                  <span class="float-end">Rs.${tax(allProducts[j].price)}   </span>   </p>
+                                <p>Amount :                                           <span class="float-end">Rs.${amntafterdis}</span></p>
+                                <p>Quantity : <span class="float-end">${occurance(cartlive,filteredcartlive[i])} </span></p>
+                                <hr>
+                                <h6 style="color:darkred;font-weight:600;" class="text-end">Total :     Rs.${finalamount.toFixed(2)}</h6><br><br>
+                                <a href="" class="btn btn-warning float-end">Place Order</a>
+                            </div>
         
                             </div>
         
                             </div>`
                             
               }
-                   
-              let amount = allProducts[j].price.match(/(\d+)/);
-              let amntafterdis = (amount[0] - discount(allProducts[j].price)).toFixed(2); 
-              let finalamount = amntafterdis*occurance(cartlive,filteredcartlive[i]);   
-                   
-                document.getElementById('grandtotal').innerHTML +=
-                        `<div class="finalamount border border-2 rounded-3 mt-5 ms-2 p-3 mb-4 shadow">
-                        <h3 class="text-center">Product Total</h3>
-                        <p>Maximum Retail Price :                                   ${allProducts[j].price}.00</p>
-                        <p>Discount(10%) :                                          Rs.${discount(allProducts[j].price)}     </p>
-                        <p>Tax Amount(12%) :                                        Rs.${tax(allProducts[j].price)}      </p>
-                        <p>Amount :                                                  Rs.${amntafterdis}</p>
-                        <p>Quantity : ${occurance(cartlive,filteredcartlive[i])} </p>
-                        <hr>
-                        <h6 style="color:darkred;font-weight:600;" class="text-end">Total :     Rs.${finalamount.toFixed(2)}</h6>
-                        <a href="" class="btn btn-warning text-end">Place Order</a>
-                        </div>`
-                         ;
-                         
-              
-              
               
              carttotal(finalamount,cartlive);
 

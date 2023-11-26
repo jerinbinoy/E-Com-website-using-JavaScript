@@ -14,7 +14,8 @@ function popingout(a){
 
 
 //Function of changing image at every 5 seconds.
-setInterval(imgChange,5000);
+setInterval(imgChange1,5000);
+setInterval(imgChange2,5000);
 
 const imgArrayFirstimg = [{img:'https://www.campusshoes.com/cdn/shop/files/CITY-RIDE_5G-627_M.GRY-LMN.jpg?v=1690478383&width=900',
                             name:'Campus CITY-RIDE',
@@ -37,9 +38,9 @@ const imgArrayFirstimg = [{img:'https://www.campusshoes.com/cdn/shop/files/CITY-
                 p:"White Men Sneakers",
                 Price:"Rs. 979.00"} ];
 
-var i=1;
+ var i=1;
 
-function imgChange(){
+function imgChange1(){
     
     while (i < imgArrayFirstimg.length){
         document.getElementById('firstimg').src = imgArrayFirstimg[i].img;
@@ -57,3 +58,39 @@ function imgChange(){
     }
     
 }
+
+
+
+const imgArraysecondimg = [{img:'https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/12/26231806/Untitled-design-6-1600x900.png',
+                            },
+                {img:'https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2019-09/shoee.jpg',
+                },
+                {img:'https://kenresearchreport.files.wordpress.com/2020/07/leather-and-footwear-market.png?w=900',
+                },
+                {img:'https://www.salomon.com/sites/default/files/2021-03/Teaser-how-to-recycle-your-running-shoes-landscape.jpg',
+                },
+                {img:'https://sneakerbardetroit.com/wp-content/uploads/2023/11/Harry-Potter-Reebok-Collection.jpg',
+                } ];
+
+
+var j=1;
+
+function imgChange2(){
+    
+    while (j < imgArraysecondimg.length){
+        document.getElementById('secndimg').src = imgArraysecondimg[j].img;
+        /*document.querySelector('.card-footer').innerHTML = `<h3>${imgArrayFirstimg[j].name}</h3>
+        <p>${imgArrayFirstimg[j].p}</p>
+        <h2>${imgArrayFirstimg[j].Price}</h2>
+        <a class="btn btn-warning" href="../Project1/collection.html">See More</a>`;*/
+
+        if (j === 4){
+            j = 0;
+        }else{
+            j++;
+        };
+        break;
+    }
+    
+}
+
