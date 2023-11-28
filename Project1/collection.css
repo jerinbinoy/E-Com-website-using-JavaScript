@@ -6,6 +6,7 @@
      font-weight: 600;
      text-shadow: 50%;
      transition: 2s;
+   
  }
  .container-fluid a:hover{
      color: black;
@@ -39,7 +40,7 @@
      
  }
  .items{
-    margin-top: 5%;
+    margin-top: 70px;
  }
  .nav-items a{
     color: black;

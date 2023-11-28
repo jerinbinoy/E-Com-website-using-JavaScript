@@ -94,7 +94,7 @@ function  addToCartJs(){
                             <div id="productlist" class="d-flex">
 
 
-                            <div class="d-flex productdescription border rounded p-3 col-6" id="product">
+                            <div class="d-flex productdescription border rounded p-3 col-12 col-md-6" id="product">
                             <div class="col-6">
                               <img src="${allProducts[j].img}" alt="" class="img-fluid rounded-3 shadow ">
                             </div>
@@ -108,7 +108,7 @@ function  addToCartJs(){
                             </div>
 
 
-                            <div class="finalamount border col-6 rounded-3  ms-2 p-3 ">
+                            <div class="finalamount border col-12 col-md-6 rounded-3  ms-2 p-3 ">
                                 <h3 class="text-center">Product Total</h3>
                                 <p>Maximum Retail Price :                             <span class="float-end"> ${allProducts[j].price}.00</span></p>
                                 <p>Discount(10%) :                                    <span class="float-end">Rs.${discount(allProducts[j].price)}  </span>   </p>
@@ -153,7 +153,7 @@ function removeproduct(pid) {
             localStorage.setItem('cartlive',JSON.stringify(cartlive));
             
             document.getElementById('product-description').innerHTML = '';
-            document.getElementById('grandtotal').innerHTML = '';
+            //document.getElementById('grandtotal').innerHTML = '';
             
             addToCartJs();
 
