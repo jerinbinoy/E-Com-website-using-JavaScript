@@ -14,7 +14,7 @@ body{
 }
 
 .navbar-nav{
-    padding-right: 15%;
+    padding-right: 10%;
 }
 .nav-item a{
     border:0;
@@ -32,7 +32,7 @@ body{
   
 }
 .cartbtn{
-  width:4%;
+  width:50px;
 }
 
 .nav-item{
