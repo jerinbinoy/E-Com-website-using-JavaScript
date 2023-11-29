@@ -10,15 +10,18 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 <body>
+<!--Svg import link-->
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
       <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
     </symbol>
   </svg>
+<!--Alert section used for showing alert-->
   <div class="alertsection" id="alertsection">
 
   </div>
 
+<!--Navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark " id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand  me-0 " href="index.html/#home">
@@ -33,54 +36,41 @@
               </li>
               <li class="nav-item">
                 <a href="./collection.html" class="btn btn-outline-warning" type="button" id="collectionbtn" >Collection</a>
-              </li>
-              
-              
+              </li> 
             </ul>
-            <a href="login.html" class="btn btn-outline-warning" role="button" id="loginbtn">Login</a>
-            
-            
-            
-            
-          </div>
-          <a type="button" class="btn btn-warning bx bx-cart-alt position-relative me-5 text-decoration-none cartbtn" href="#">
-            
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-btn">
-              0
-              
-            </span>
-          </a>
 
+            <a href="login.html" class="btn btn-outline-warning" role="button" id="loginbtn">Login</a>
+             
+          </div>
+<!--Cart button which shows cart amount too-->          
+          <a type="button" class="btn btn-warning bx bx-cart-alt position-relative me-5 text-decoration-none cartbtn" href="#">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-btn">0</span>
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
       </nav>
 
-
-      <div class="container rounded-3 ">
+<!--My cart shows products in the cart-->
+    <div class="container rounded-3 ">
         <div class="carttitle text-center  mt-4 ">
                 <h3 >My Cart</h3> 
         </div>
-       
+<!--Cart total showing div-->       
         <div class="row " id="carttotal">
           
         </div>
         <h4 class="text-center m-3 ms-1 border col-12 p-4 rounded-3" id="emptycart">Your cart is empty</h4>
         <div class="d-flex">
+<!--The products in the cart will be generated using javascript and will be placed here-->          
         <div class="col-12 " id="product-description">
-          
-                  
-
-
-                    
-              
-
+         
         </div>
         
-       </div>
+        </div>
 
-
+<!--Related products -->
     <h3>Related Products</h3>
     <div class="row row-cols-1 row-cols-md-3 g-4 ">
       <div class="col">

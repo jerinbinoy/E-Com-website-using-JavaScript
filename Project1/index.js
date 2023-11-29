@@ -1,3 +1,4 @@
+//The navbar is transparent in the home page and it attains a background when scrolled more than 735px.
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -25,10 +26,10 @@ function popingout(a){
 }
 
 
-//Function of changing image at every 5 seconds.
+// The Function of changing image is called at every 5 seconds.
 setInterval(imgChange1,5000);
 //setInterval(imgChange2,5000);
-
+//The array of images which is to be displayed in every 5 seconds.Its details are also added.
 const imgArrayFirstimg = [{img:'https://www.campusshoes.com/cdn/shop/files/CITY-RIDE_5G-627_M.GRY-LMN.jpg?v=1690478383&width=900',
                           name:'Campus CITY-RIDE',
                            p: "Grey Men's Sneakers",
@@ -51,7 +52,7 @@ const imgArrayFirstimg = [{img:'https://www.campusshoes.com/cdn/shop/files/CITY-
               Price:"Rs. 979.00"} ];
 
 var i=1;
-
+//The images are looped and set image in every 5 seconds
 function imgChange1(){
   
   while (i < imgArrayFirstimg.length){

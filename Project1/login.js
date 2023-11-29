@@ -1,9 +1,8 @@
 
+//This same script is used for the signup html also.
 
 
-
-
-
+//Password field is required function.
 document.getElementById('password').blur(function(){
         
         var password1 = document.querySelector('.passwordinput').value;
@@ -12,16 +11,12 @@ document.getElementById('password').blur(function(){
                 }
         });
 
-
-
-
-
 // Receiving the click and calling adequate function to perform
 const submitButton = document.querySelector('.submit-btn');
-if(submitButton){
-        submitButton.addEventListener('click',addUser);
-}
-document.querySelector('.btn').addEventListener('click',validation);
+        if(submitButton){
+                submitButton.addEventListener('click',addUser);
+        }
+        document.querySelector('.btn').addEventListener('click',validation);
 
 
 
@@ -72,8 +67,6 @@ function validation(){
        var filteredUsers = importUser.filter(function(filtered){
                 return filtered != null ; 
        }) ;
-
-       console.log(filteredUsers);
         
        // Validating the credentials with the stored data of the user from the local storage using for loop
         for(let i=0;i<filteredUsers.length;i++){

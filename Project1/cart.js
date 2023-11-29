@@ -1,4 +1,4 @@
-
+//Allproducts listed as objects in the array and each product have unique product id. pid means product id.
 const allProducts = [
                                       //trending collection       
                                       {pid:'lksdkjfiq6478',
@@ -177,48 +177,47 @@ const allProducts = [
 
 let cartamnttotal = [] ;
                                    
-
+//Onload function which shows the quantity in the cart
 window.onload = function cartQuantity(){
    
   let cartQuantity = JSON.parse(localStorage.getItem('cartquantity'));
-  console.log(cartQuantity) ;
-  if (cartQuantity === null){
-      
-      document.getElementById('cart-btn').innerHTML = 0 ;
-  }else{
-    document.getElementById('cart-btn').innerHTML = cartQuantity ;
-  }
+   
+        if (cartQuantity === null){
+            
+            document.getElementById('cart-btn').innerHTML = 0 ;
+        }else{
+          document.getElementById('cart-btn').innerHTML = cartQuantity ;
+        }
 };
 
-
+//The function of addtocartjs will be called always when the page loads
 addToCartJs();
-
+//When this function will be called, the cart will be updated its number and product will be listed.
 function  addToCartJs(){
+  //live cart is taken from local storage.
     let cartlive = JSON.parse(localStorage.getItem('cartlive'));
+    //Product id will be extracted from cartlive
     let pids = cartlive.map(function(item){return item['pid']});
+    //Repeated productids will be filtered and stored in new array
     let filteredcartlive = pids.filter((pid,index) =>pids.indexOf(pid) === index );
     
     
-     
+ //Product ids are looped.  
     for ( let i = 0; i < filteredcartlive.length; i++){
-
-      
-
+//Allproducts are looped.
           for ( let j = 0 ; j < allProducts.length ; j++ ){
-            console.log(filteredcartlive[i]);
-          
-
+          //The product id received from user checked with the array of allproducts and proceed if they match.  
            if (filteredcartlive[i] === allProducts[j].pid){
-
+            //The emptycart message will be disabled.
              let emptycart = document.getElementById('emptycart');
              emptycart.style.display = 'none';
-
+            //The MRP rate of product is extracted and discount function and amount after discount function is called.
               let amount = allProducts[j].price.match(/(\d+)/);
               let amntafterdis = (amount[0] - discount(allProducts[j].price)).toFixed(2); 
               let finalamount = amntafterdis*occurance(cartlive,filteredcartlive[i]);
-
+            //If the emptycart message is disabled 
               if (emptycart.style.display === 'none'){
-
+                //The matching product will be listed here using the values taken from the all products array.Rate of the product also calculated and placed respectively.
                 document.getElementById('product-description').innerHTML += `
                         
                             <div class="productdetails col-12  mt-5  rounded-3 border  border-2 p-3 mb-4 shadow " id="productdetails">
@@ -257,7 +256,7 @@ function  addToCartJs(){
                             </div>`
                             
               }
-              
+             //carttotal is a function which calculates the sum of the products in the cart with their quantity.
              carttotal(finalamount,cartlive);
 
             }
@@ -268,7 +267,7 @@ function  addToCartJs(){
         };
 
     };
-
+//If the place order button is clicked the  alert will be showed.
 function orderalert(){
 
           document.getElementById('alertsection').innerHTML = `<div class="alert alert-dismissible alert-success d-flex align-items-center" role="alert">
@@ -281,13 +280,13 @@ function orderalert(){
 
             window.alert('Order placed succesfully.');                                        
 }    
-    
+//If the remove product button is clicked the entire product will be removed from the cart.    
 function removeproduct(pid) {
 
         let cartlive = JSON.parse(localStorage.getItem('cartlive'));
         cartamnttotal = [] ;
         
-        
+        //cartlive is looped and find the pid is matching with the local storage and splice it from local storage and update it.
         for (i = 0; i < cartlive.length ; i++){
           if (pid === cartlive[i].pid){
             let occured = occurance(cartlive,pid);
@@ -296,7 +295,6 @@ function removeproduct(pid) {
             localStorage.setItem('cartlive',JSON.stringify(cartlive));
             
             document.getElementById('product-description').innerHTML = '';
-            //document.getElementById('grandtotal').innerHTML = '';
             
             addToCartJs();
 
@@ -307,42 +305,39 @@ function removeproduct(pid) {
           }
           
         }
-        
+        //The cart and local storage will be updated
         document.getElementById('cart-btn').innerHTML = cartlive.length ;
         localStorage.removeItem('cartquantity') ;
         window.alert(`Successfully removed the product`);
         
-        
-        
 }           
    
 
-
+//This function returns the quantity of the product from the occurance of the user clicked the add cart button.
 function occurance(cartlive,pid){
       let count = 0;
       cartlive.forEach((val) => (val.pid === pid && count++));
       return count;
 }
           
-
+//THis function returns the discount of the product calculated from MRP
 function discount(mrp){
   let MRP = mrp.match(/(\d+)/);
   
   let discount = ((MRP[0]/100)*10).toFixed(2) ;
   return discount ;
-  
-
+ 
 }
 
+//This function returns the tax amount of the product from the MRP
 function tax(mrp){
           let MRP = mrp.match(/(\d+)/);
 
           let tax = ((MRP[0]/100)*12).toFixed(2) ;
           return tax;
 }
- 
 
-
+//This function calculates the sum of all products in the cart. And will be displayed at the top.
 function carttotal(finalamount,cartlive){
         if (cartlive.length === 0){
           document.getElementById('carttotal').innerHTML = ``;
@@ -350,8 +345,6 @@ function carttotal(finalamount,cartlive){
         var finalamount1 = finalamount.toFixed(2);
         
         cartamnttotal.push(finalamount1);
-        
-        console.log(cartamnttotal);
         
         let sum = 0;
         cartamnttotal.forEach((item)=>(sum += Number(item)));

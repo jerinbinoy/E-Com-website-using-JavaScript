@@ -1,3 +1,4 @@
+//All products are listed in this array as objects.
 const allProducts = [
                     //trending collection       
                     {pid:'lksdkjfiq6478',
@@ -174,11 +175,11 @@ const allProducts = [
                             ];
 
 
-
+//This is an empty array which stores the product ids from the user and stores it in the local storage.
 const addCartArray = [];
-
+// This is the function to perform the action when user click the add to cart button.It taked the product id and store in the array.
  function addToCart(pid){
-    
+        //The cart quantity also increased when user click the add to cart button.
         let cartsize = Number(document.getElementById('cart-btn').innerText);
         document.getElementById('cart-btn').innerHTML = cartsize + 1 ;
         let cartquantity = cartsize + 1 ;
@@ -192,7 +193,7 @@ const addCartArray = [];
         
 } 
 
-
+// This function works to display the modal popup for product details and price.
 function productoverview(pid){
 
         for (var i = 0 ; i < allProducts.length ; i++){
