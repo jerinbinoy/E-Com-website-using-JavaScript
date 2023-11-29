@@ -305,10 +305,13 @@ function removeproduct(pid) {
               document.getElementById('carttotal').innerHTML = ``;
             }
           }
+          
         }
         
         document.getElementById('cart-btn').innerHTML = cartlive.length ;
         localStorage.removeItem('cartquantity') ;
+        window.alert(`Successfully removed the product`);
+        
         
         
 }           
