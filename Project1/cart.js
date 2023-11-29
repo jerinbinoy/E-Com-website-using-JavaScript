@@ -249,7 +249,7 @@ function  addToCartJs(){
                                 <p>Quantity : <span class="float-end">${occurance(cartlive,filteredcartlive[i])} </span></p>
                                 <hr>
                                 <h6 style="color:darkred;font-weight:600;" class="text-end">Total :     Rs.${finalamount.toFixed(2)}</h6><br><br>
-                                <a href="" class="btn btn-warning float-end">Place Order</a>
+                                <button href="" class="btn btn-warning float-end" onclick="orderalert()">Place Order</button>
                             </div>
         
                             </div>
@@ -269,7 +269,18 @@ function  addToCartJs(){
 
     };
 
-    
+function orderalert(){
+
+          document.getElementById('alertsection').innerHTML = `<div class="alert alert-dismissible alert-success d-flex align-items-center" role="alert">
+                                                      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                      <div>
+                                                        Your order placed successfully.
+                                                      </div>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                    </div>`;
+
+            window.alert('Order placed succesfully.');                                        
+}    
     
 function removeproduct(pid) {
 

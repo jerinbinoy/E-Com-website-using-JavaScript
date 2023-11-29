@@ -15,7 +15,7 @@ function popingout(a){
 
 //Function of changing image at every 5 seconds.
 setInterval(imgChange1,5000);
-setInterval(imgChange2,5000);
+//setInterval(imgChange2,5000);
 
 const imgArrayFirstimg = [{img:'https://www.campusshoes.com/cdn/shop/files/CITY-RIDE_5G-627_M.GRY-LMN.jpg?v=1690478383&width=900',
                             name:'Campus CITY-RIDE',
@@ -61,7 +61,7 @@ function imgChange1(){
 
 
 
-const imgArraysecondimg = [{img:'https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/12/26231806/Untitled-design-6-1600x900.png',
+/*const imgArraysecondimg = [{img:'https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/12/26231806/Untitled-design-6-1600x900.png',
                             },
                 {img:'https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2019-09/shoee.jpg',
                 },
@@ -79,10 +79,10 @@ function imgChange2(){
     
     while (j < imgArraysecondimg.length){
         document.getElementById('secndimg').src = imgArraysecondimg[j].img;
-        /*document.querySelector('.card-footer').innerHTML = `<h3>${imgArrayFirstimg[j].name}</h3>
+        document.querySelector('.card-footer').innerHTML = `<h3>${imgArrayFirstimg[j].name}</h3>
         <p>${imgArrayFirstimg[j].p}</p>
         <h2>${imgArrayFirstimg[j].Price}</h2>
-        <a class="btn btn-warning" href="../Project1/collection.html">See More</a>`;*/
+        <a class="btn btn-warning" href="../Project1/collection.html">See More</a>`;
 
         if (j === 4){
             j = 0;
@@ -93,4 +93,4 @@ function imgChange2(){
     }
     
 }
-
+*/
